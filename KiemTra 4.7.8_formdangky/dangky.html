@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=tabl, initial-scale=1.0" />
+    <title>Form Đăng Ký</title>
+  </head>
+  <body>
+    <h1>Form Đăng Ký</h1>
+    <table border="1">
+      <form>
+        <tr>
+          <td><label for="name">Tên:</label></td>
+          <td><input type="text" id="name" name="name" /></td>
+        </tr>
+        <tr>
+          <td><label for="password">Mật khẩu:</label></td>
+          <td><input type="password" id="password" name="password" /></td>
+        </tr>
+        <tr>
+          <td><label for="email">Email:</label></td>
+          <td><input type="email" id="email" name="email" /></td>
+        </tr>
+        <tr>
+          <td><label for="gender">Giới tính:</label></td>
+          <td>
+            <input type="radio" id="male" name="gt" />
+            <label for="male">Nam</label>
+            <input type="radio" id="female" name="gt" />
+            <label for="female">Nữ</label>
+          </td>
+        </tr>
+        <td><label for=" Select Country">Quốc gia:</label></td>
+        <td>
+          <select id="country" name="country">
+            <option value="vn">Việt Nam</option>
+            <option value="us">Mỹ</option>
+            <option value="uk">Anh</option>
+            <option value="jp">Nhật Bản</option>
+            <option value="ru">Nga</option>
+          </select>
+        </td>
+        <tr>
+          <td><input type="submit" value="register" /></td>
+        </tr>
+      </form>
+    </table>
+  </body>
+</html>
