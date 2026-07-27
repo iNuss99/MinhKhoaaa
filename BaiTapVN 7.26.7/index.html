@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SuperCar</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="container">
+        <div class="logo">Supercar</div>
+        <nav>
+          <ul class="nav-menu">
+            <li><a href="#">Trang chủ</a></li>
+            <li><a href="#cars">Mẫu xe</a></li>
+            <li><a href="#">Giới thiệu</a></li>
+            <li><a href="#contact">Liên hệ</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main class="content" id="cars">
+      <div class="container">
+        <h1 class="content-title">Siêu xe đẳng cấp</h1>
+        <div class="card-list">
+          <div class="card">
+            <img
+              src="https://images.unsplash.com/photo-1583121274602-3e2820c69888?w=400&h=250&fit=crop&crop=center"
+              alt="Ferrari"
+            />
+            <h3>Ferrari F8 Tributo</h3>
+            <p>
+              Động cơ V8 tăng áp, công suất 720 mã lực, 0-100 km/h chỉ 2.9 giây.
+            </p>
+            <button class="card-btn">Xem chi tiết</button>
+          </div>
+          <div class="card">
+            <img
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQJBPp6NkxrTvPx5vTz66wT_KMXSOE9wC8rzOcLNMpNug&s=10"
+              alt="Lamborghini"
+            />
+            <h3>Lamborghini Huracan</h3>
+            <p>
+              Động cơ V10 hút khí tự nhiên, 640 mã lực, khung gầm nhôm và sợi
+              carbon.
+            </p>
+            <button class="card-btn">Xem chi tiết</button>
+          </div>
+          <div class="card">
+            <img
+              src="https://images.unsplash.com/photo-1614162692292-7ac56d7f7f1e?w=400&h=250&fit=crop&crop=center"
+              alt="Porsche"
+            />
+            <h3>Porsche 911 Turbo S</h3>
+            <p>
+              Động cơ boxer 6 xy-lanh tăng áp, 650 mã lực, dẫn động 4 bánh toàn
+              thời gian.
+            </p>
+            <button class="card-btn">Xem chi tiết</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <section class="contact" id="contact">
+      <div class="container">
+        <div class="contact-info">
+          <h2>Liên hệ</h2>
+          <p>+84 987 654 321</p>
+          <p>sieuxe@supercar.vn</p>
+          <p>456 Đường Tốc Độ, Quận 1, TP.HCM</p>
+        </div>
+        <form class="contact-form">
+          <h3>Gửi yêu cầu tư vấn</h3>
+          <div class="form-group">
+            <label for="name">Họ và tên</label>
+            <input type="text" id="name" placeholder="Họ và Tên" required />
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input
+              type="email"
+              id="email"
+              placeholder="email@email.com"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="message">Nội dung</label>
+            <textarea
+              id="message"
+              placeholder="Bạn quan tâm đến dòng xe nào?"
+            ></textarea>
+          </div>
+          <button type="submit" class="submit-btn">Gửi ngay</button>
+        </form>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="copy">
+          &copy; 2026 <strong>SuperCar</strong>. Bản quyền thuộc về chúng tôi.
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

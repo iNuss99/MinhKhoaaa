@@ -1,165 +1,234 @@
-/* Phần 1 */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
+
 body {
-  font-family: Arial, Helvetica, sans-serif;
-}
-header {
-  background-color: #5c3317;
-  color: white;
-  text-align: center;
-  padding: 20px;
-}
-nav ul {
+  font-family: Arial, sans-serif;
+  background: #f4f4f4;
+  color: #333;
+  min-height: 100vh;
   display: flex;
+  flex-direction: column;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.header {
+  background: #222;
+  color: #fff;
+  padding: 12px 0;
+}
+
+.header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px 20px;
+}
+
+.logo {
+  font-size: 1.6rem;
+  font-weight: bold;
+}
+.logo span {
+  color: #f5c518;
+}
+
+.nav-menu {
+  display: flex;
+  gap: 20px;
   list-style: none;
-  justify-content: center;
-  gap: 30px;
-  margin: 10px 0 0;
+  flex-wrap: wrap;
 }
-nav ul li a {
-  color: white;
+
+.nav-menu a {
+  color: #ddd;
   text-decoration: none;
-  font-size: 16px;
-}
-nav ul li a:hover {
-  color: #ffde4e;
-}
-/* Phần 2 */
-.banner img {
-  width: 100%;
-  height: 400px;
-  object-fit: cover;
-  display: block;
-}
-.about-content {
-  background-color: #fff8f0;
-  padding: 40px;
-  text-align: center;
-}
-.about-content h2 {
-  color: #5c3317;
-  font-size: 30px;
-  margin-bottom: 20px;
   font-weight: 600;
+  padding: 4px 0;
+  border-bottom: 2px solid transparent;
 }
-.about-content a {
-  display: inline-block;
-  text-decoration: none;
-  color: #fff8f0;
-  background-color: #5c3317;
-  border: 2px solid;
-  border-radius: 50px;
-  padding: 10px 10px;
-  margin-top: 15px;
-  transition: ease 0.25s;
+.nav-menu a:hover {
+  color: #f5c518;
+  border-bottom-color: #f5c518;
 }
-.about-content .btn:hover {
-  background-color: #611c92;
+
+.content {
+  padding: 40px 0 50px;
+  flex: 1;
 }
-p {
-  margin: 10px 0;
-}
-/* Phần 3- Card */
-#menu {
-  background-color: white;
-  padding: 40px;
+
+.content-title {
   text-align: center;
+  font-size: 2rem;
+  margin-bottom: 6px;
 }
-#menu2 h2 {
-  color: #5c3317;
-  font-size: 28px;
+.content-sub {
+  text-align: center;
+  color: #666;
   margin-bottom: 30px;
 }
-.menu-grid {
+
+.card-list {
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
-  gap: 30px;
+  flex-wrap: wrap;
+  gap: 25px;
 }
+
 .card {
-  width: 33.33%;
-  border: 1px solid #cccc;
-  overflow: hidden;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  transition: ease 0.25s;
+  background: #fff;
+  border-radius: 10px;
+  padding: 18px;
+  flex: 1 1 260px;
+  max-width: 320px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
-.card:hover {
-  transform: translateY(-5px);
-}
+
 .card img {
   width: 100%;
-  border-radius: 30px;
-  height: 350px;
+  height: 170px;
   object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 12px;
 }
+
 .card h3 {
-  margin-top: 5px;
-  margin: 0;
+  font-size: 1.2rem;
+  margin-bottom: 6px;
 }
 .card p {
   color: #555;
-  font-size: 16px;
+  font-size: 0.95rem;
+  margin-bottom: 14px;
+  flex: 1;
 }
-.price {
-  display: block;
-  color: red;
-  font-weight: 700;
-  padding: 0 15px 15px;
+.card-btn {
+  background: #f5c518;
+  border: none;
+  padding: 6px 18px;
+  border-radius: 20px;
+  font-weight: bold;
+  cursor: default;
+  margin-top: auto;
 }
-/* Phần 4 */
-#contact {
-  background-color: #fff8f0;
-  padding: 40px;
-  text-align: center;
+.card-btn:hover {
+  background: #e0b010;
 }
-#contact h2 {
-  color: #5c3317;
-  font-size: 28px;
-  margin-bottom: 30px;
+
+.contact {
+  background: #fff;
+  padding: 40px 0 50px;
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
 }
-.content-wrapper {
+
+.contact .container {
   display: flex;
-  justify-content: center;
-  gap: 40px;
   flex-wrap: wrap;
+  gap: 40px 60px;
+  align-items: flex-start;
 }
-.contact-info,
+
+.contact-info {
+  flex: 1 1 250px;
+  min-width: 200px;
+}
+.contact-info h2 {
+  margin-bottom: 12px;
+}
+.contact-info p {
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.contact-info .icon {
+  font-size: 1.1rem;
+  width: 24px;
+}
+
 .contact-form {
-  width: 300px;
-  text-align: left;
+  flex: 1 1 300px;
+  background: #f9f9f9;
+  padding: 24px;
+  border-radius: 10px;
+  border: 1px solid #eee;
+}
+.contact-form h3 {
+  margin-bottom: 16px;
+}
+.contact-form .form-group {
+  margin-bottom: 14px;
+}
+.contact-form label {
+  display: block;
+  font-weight: 600;
+  font-size: 0.9rem;
+  margin-bottom: 4px;
 }
 .contact-form input,
 .contact-form textarea {
   width: 100%;
-  padding: 10px;
-  margin-bottom: 12px;
-  border: 1px solid white;
-  border-radius: 8px;
-  font-size: 14px;
-  border: 2px solid #cd621b;
-}
-.contact-form button {
-  background-color: #cd621b;
-  color: white;
-  padding: 12px 30px;
-  border: none;
+  padding: 8px 12px;
+  border: 1px solid #ccc;
   border-radius: 6px;
-  font-size: 15px;
+  font-size: 1rem;
+  font-family: inherit;
+}
+.contact-form textarea {
+  min-height: 80px;
+  resize: vertical;
+}
+.contact-form .submit-btn {
+  background: #f5c518;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 30px;
+  font-weight: bold;
+  font-size: 1rem;
   cursor: pointer;
   width: 100%;
-  transition: ease 0.25s;
 }
-.contact-form button:hover {
-  background-color: #884513;
+.contact-form .submit-btn:hover {
+  background: #e0b010;
 }
-footer {
-  background-color: #333;
-  color: white;
-  text-align: center;
-  padding: 30px;
-  font-size: 15px;
+
+.footer {
+  background: #222;
+  color: #ccc;
+  padding: 20px 0;
+  margin-top: auto;
+}
+
+.footer .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px 20px;
+}
+
+.footer .copy {
+  font-size: 0.9rem;
+}
+.footer .copy strong {
+  color: #fff;
+}
+.footer-info {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 16px;
+  font-size: 0.9rem;
 }
