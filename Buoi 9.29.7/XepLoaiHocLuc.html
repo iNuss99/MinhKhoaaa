@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Xếp Loại Học Lực</title>
+  </head>
+
+  <body>
+    <h2>Xếp Loại Học Lực</h2>
+    <label for="">Nhập điểm:</label>
+    <input type="number" id="point" />
+    <br />
+    <button onclick="XepLoai()">Xếp Loại</button>
+    <p id="result"></p>
+
+    <script>
+      function XepLoai() {
+        let point = Number(document.getElementById("point").value);
+        if (point >= 90) {
+          document.getElementById("result").innerHTML = point + " là Điểm A";
+        } else if (point >= 80) {
+          document.getElementById("result").innerHTML = point + " là Điểm B";
+        } else if (point >= 70) {
+          document.getElementById("result").innerHTML = point + " là Điểm C";
+        } else if (point >= 50) {
+          document.getElementById("result").innerHTML = point + " là Điểm D";
+        } else {
+          document.getElementById("result").innerHTML = point + " là Điểm F";
+        }
+      }
+    </script>
+  </body>
+</html>

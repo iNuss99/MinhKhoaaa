@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chuyển Đổi Nhiệt Độ</title>
+  </head>
+
+  <body>
+    <h2>Chương trình chuyển đổi nhiệt độ từ C sang F</h2>
+    <label for="c">Độ C:</label>
+    <input type="number" id="c" />
+    <button onclick="Convert()">Chuyển đổi</button>
+    <p id="result"></p>
+
+    <script>
+      function Convert() {
+        let c = document.getElementById("c").value;
+        let f = (Number(c) * 9) / 5 + 32;
+        document.getElementById("result").innerHTML =
+          c + " độ C = " + f + " độ F";
+      }
+    </script>
+  </body>
+</html>

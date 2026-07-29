@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tính Chỉ Số BMI</title>
+  </head>
+
+  <body>
+    <h2>Tính Chỉ Số BMI</h2>
+    <label for="weight">Cân nặng (kg):</label>
+    <input type="number" id="weight" />
+    <br />
+    <label for="height">Chiều cao (m):</label>
+    <input type="number" id="height" />
+    <br />
+    <button onclick="CalculateBMI()">Tính BMI</button>
+    <p id="result"></p>
+
+    <script>
+      function CalculateBMI() {
+        let weight = document.getElementById("weight").value;
+        let height = document.getElementById("height").value;
+        let bmi = weight / (height * height);
+        if (bmi < 18.5) {
+          document.getElementById("result").innerHTML =
+            "Chỉ số BMI của bạn là: " + bmi + " (Thiếu cân)";
+        } else if (bmi < 25) {
+          document.getElementById("result").innerHTML =
+            "Chỉ số BMI của bạn là: " + bmi + " (Bình thường)";
+        } else if (bmi < 30) {
+          document.getElementById("result").innerHTML =
+            "Chỉ số BMI của bạn là: " + bmi + " (Thừa cân)";
+        } else {
+          document.getElementById("result").innerHTML =
+            "Chỉ số BMI của bạn là: " + bmi + " (Béo phì)";
+        }
+      }
+    </script>
+  </body>
+</html>

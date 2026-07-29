@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Xem Boi Tinh Yeu</title>
+  </head>
+  <body>
+    <h2>Love Calculator ❤️</h2>
+
+    <label>Your Name</label>
+    <input type="text" id="yourName" />
+    <br /><br />
+
+    <label>Crush Name</label>
+    <input type="text" id="crushName" />
+    <br /><br />
+
+    <button onclick="checkLove()">Check Love</button>
+
+    <p id="result"></p>
+
+    <script>
+      function checkLove() {
+        let yourName = document.getElementById("yourName").value;
+        let crushName = document.getElementById("crushName").value;
+
+        if (yourName === "" || crushName === "") {
+          document.getElementById("result").innerHTML =
+            "Vui lòng nhập đầy đủ tên!";
+          return;
+        }
+
+        let score = Math.floor(Math.random() * 100) + 1;
+
+        if (score >= 50) {
+          document.getElementById("result").innerHTML =
+            yourName +
+            " ❤️ " +
+            crushName +
+            " Love score: " +
+            score +
+            "% - Hai đứa hợp nhau đó 😍";
+        } else {
+          document.getElementById("result").innerHTML =
+            yourName +
+            " ❤️ " +
+            crushName +
+            " Love score: " +
+            score +
+            "% - Có vẻ không hợp lắm 😢";
+        }
+      }
+    </script>
+  </body>
+</html>
