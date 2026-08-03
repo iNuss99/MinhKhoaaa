@@ -1,0 +1,29 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Đếm</title>
+  </head>
+  <body>
+    <h3>Đếm ký tự và từ</h3>
+
+    <textarea id="text"></textarea><br /><br />
+    <button onclick="dem()">Đếm</button>
+
+    <p id="kq"></p>
+
+    <script>
+      function dem() {
+        var text = document.getElementById("text").value;
+
+        var soKyTu = text.length;
+
+        var mang = text.split(" ");
+        var soTu = mang.length;
+
+        document.getElementById("kq").innerHTML =
+          "Ký tự: " + soKyTu + "<br>Từ: " + soTu;
+      }
+    </script>
+  </body>
+</html>

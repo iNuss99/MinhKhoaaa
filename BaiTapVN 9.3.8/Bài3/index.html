@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Kiểm tra mật khẩu</title>
+  </head>
+  <body>
+    <h3>Kiểm tra mật khẩu</h3>
+
+    <input type="text" id="pass" />
+    <button onclick="kiemTra()">Kiểm tra</button>
+
+    <p id="kq"></p>
+
+    <script>
+      function kiemTra() {
+        var pass = document.getElementById("pass").value;
+
+        var coChuHoa = false;
+        var coSo = false;
+
+        for (var i = 0; i < pass.length; i++) {
+          if (pass[i] >= "A" && pass[i] <= "Z") {
+            coChuHoa = true;
+          }
+          if (pass[i] >= "0" && pass[i] <= "9") {
+            coSo = true;
+          }
+        }
+
+        if (pass.length >= 6 && coChuHoa && coSo) {
+          document.getElementById("kq").innerHTML = "Mật khẩu hợp lệ";
+        } else {
+          document.getElementById("kq").innerHTML = "Mật khẩu không hợp lệ";
+        }
+      }
+    </script>
+  </body>
+</html>
